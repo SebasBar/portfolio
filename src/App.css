@@ -6,53 +6,8 @@
 }
 
 .menu {
-  color: brown;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-}
-
-h2 {
-  padding: 15px;
-}
-
-.presentation {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: white;
-  padding: 0 10px;
-}
-
-.name {
-  align-self: flex-start;
-}
-
-.lastname {
-  align-self: flex-end;
-}
-
-.greetings {
-  align-self: flex-start;
-}
-
-.subtitle {
-  align-self: flex-end;
-}
-
-.stupid-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 40px;
-}
-
-.info {
-  font-size: 40px;
-  padding: 10px;
-}
-
-.body {
-  padding: 0;
-  margin: 0;
+  text-decoration: none;
 }
