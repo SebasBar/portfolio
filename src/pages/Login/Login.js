@@ -13,7 +13,7 @@ export default function Login() {
   const handleLogin = (e) => {
     e.preventDefault();
     console.log("login function");
-    fetch(`/sebasbar/login`, {
+    fetch(`/auth/login/1`, {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ user, password }),

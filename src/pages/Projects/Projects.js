@@ -5,7 +5,7 @@ export default function Projects() {
   const [projectsInfo, setProjectsInfo] = useState([]);
 
   useEffect(() => {
-    fetchApi("/sebasbar/projects")
+    fetchApi("/projects/")
       .then((data) => {
         console.log(data);
         setProjectsInfo(data);

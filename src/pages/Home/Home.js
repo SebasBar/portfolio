@@ -12,7 +12,7 @@ export default function Home() {
       .then((data) => {
         setSebasInfo(data);
         console.log(
-          `this is the data ${data} ${data[0].first_name} ${data.last_name}`
+          `this is the data ${data} ${data.first_name} ${data.last_name}`
         );
       })
       .catch((err) => {
@@ -38,7 +38,7 @@ export default function Home() {
             </AnimatedText>
           </div>
           <div className="subtitle">
-            <h1>and I am a full stack web developer</h1>
+            <h1>full stack web developer</h1>
           </div>
         </div>
         <div className="stupid-info">
