@@ -1,14 +1,6 @@
 import { useSpeechRecognition } from "react-speech-kit";
 import React, { useState } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
-
-import Projects from "../../pages/Projects/Projects";
-import Home from "../../pages/Home/Home";
-import AboutThis from "../../pages/AboutThis/AboutThis";
-import AboutMe from "../../pages/AboutMe/AboutMe";
-import Admin from "../../pages/AdminPanel/Admin";
-import Login from "../../pages/Login/Login";
 
 export default function Mic() {
   const [startStop, setStartStop] = useState(true);
@@ -63,8 +55,8 @@ export default function Mic() {
       listen();
       setStartStop(!startStop);
     } else {
-      stop();
       setStartStop(!startStop);
+      stop();
     }
   };
 
