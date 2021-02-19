@@ -1,0 +1,32 @@
+.menu-mic {
+  height: 10vh;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-link:hover {
+  color: white;
+  background-color: #001f3f;
+  /* opacity: 0.7; */
+  transition: 0.8s;
+  width: 120%;
+  height: 70%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.menu-link {
+  background-color: white;
+  height: 70%;
+  width: 120%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,5 +1,11 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  NavLink,
+} from "react-router-dom";
+import "./Menu.css";
 
 import Projects from "../../pages/Projects/Projects";
 import Home from "../../pages/Home/Home";
@@ -12,55 +18,69 @@ import Mic from "../../components/Mic/Mic";
 export default function Menu() {
   return (
     <Router>
-      <nav className="menu">
-        <Link
-          to="/projects"
-          style={{
-            textDecoration: "none",
-            color: "#001f3f",
-            fontFamily: "Raleway, sans-serif",
-          }}
-        >
-          <h2>Projects</h2>
-        </Link>
-        <Link
-          to="/aboutthis"
-          style={{
-            textDecoration: "none",
-            color: "#001f3f",
-            fontFamily: "Raleway, sans-serif",
-          }}
-        >
-          <h2>About this Site</h2>
-        </Link>
-        <Link
-          to="/aboutme"
-          style={{
-            textDecoration: "none",
-            color: "#001f3f",
-            fontFamily: "Raleway, sans-serif",
-          }}
-        >
-          <h2>About Me</h2>
-        </Link>
-        <Link
-          to="/"
-          style={{
-            textDecoration: "none",
-            color: "#001f3f",
-            fontFamily: "Raleway, sans-serif",
-          }}
-        >
-          <h2>Home</h2>
-        </Link>
-      </nav>
-
-      <Mic />
-
+      <div className="menu-mic">
+        <nav className="menu">
+          <NavLink
+            to="/projects"
+            activeStyle={{
+              fontWeight: "bold",
+              color: "red",
+              textDecoration: "underline",
+            }}
+            style={{
+              textDecoration: "none",
+              color: "#001f3f",
+              fontFamily: "Raleway, sans-serif",
+            }}
+          >
+            <h2 className="menu-link">Projects</h2>
+          </NavLink>
+          <NavLink
+            to="/aboutthis"
+            activeStyle={{
+              fontWeight: "bold",
+              color: "red",
+              textDecoration: "underline",
+            }}
+            style={{
+              textDecoration: "none",
+              color: "#001f3f",
+              fontFamily: "Raleway, sans-serif",
+            }}
+          >
+            <h2 className="menu-link">About this Site</h2>
+          </NavLink>
+          <NavLink
+            to="/aboutme"
+            activeStyle={{
+              fontWeight: "bold",
+              color: "red",
+              textDecoration: "underline",
+            }}
+            style={{
+              textDecoration: "none",
+              color: "#001f3f",
+              fontFamily: "Raleway, sans-serif",
+            }}
+          >
+            <h2 className="menu-link">About Me</h2>
+          </NavLink>
+          <NavLink
+            to="/"
+            style={{
+              textDecoration: "none",
+              color: "#001f3f",
+              fontFamily: "Raleway, sans-serif",
+            }}
+          >
+            <h2 className="menu-link">Home</h2>
+          </NavLink>
+        </nav>
+        <div className="mic">
+          <Mic />
+        </div>
+      </div>
       <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
         <Route exact path="/projects">
           <Projects />
         </Route>
@@ -75,6 +95,9 @@ export default function Menu() {
         </Route>
         <Route exact path="/login">
           <Login />
+        </Route>
+        <Route exact path="/">
+          <Home />
         </Route>
       </Switch>
     </Router>

@@ -1,6 +1,8 @@
 import { useSpeechRecognition } from "react-speech-kit";
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import "@fortawesome/fontawesome-free";
+import "./Mic.css";
 
 export default function Mic() {
   const [startStop, setStartStop] = useState(true);
@@ -62,8 +64,12 @@ export default function Mic() {
 
   return (
     <>
-      <div>
-        <button onClick={micActivation}>🎤</button>
+      <div className="mic">
+        <p className="legend">Press here and say → which page to go</p>
+        <button
+          className="fa fa-microphone fa-2x mic-color"
+          onClick={micActivation}
+        ></button>
       </div>
     </>
   );

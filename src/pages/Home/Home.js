@@ -44,7 +44,7 @@ export default function Home() {
         <div className="stupid-info">
           <div className="info">
             This website is fetching information from a database, you can check
-            more abou it in the section "About this Site" in the menu above ...
+            more about it in the section "About this Site" in the menu above ...
           </div>
         </div>
       </div>
