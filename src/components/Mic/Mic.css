@@ -1,0 +1,24 @@
+.mic-color {
+  color: #083f75;
+  padding: 0;
+  border: none;
+  background: none;
+  justify-content: center;
+}
+
+button:focus {
+  outline: none;
+}
+
+.legend {
+  font-family: "Indie Flower", cursive;
+  font-size: 15px;
+  width: 160px;
+  height: 30px;
+}
+
+.mic {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 30px;
+}
