@@ -14,36 +14,42 @@ export default function Mic() {
     if (result.includes("project" || "Project" || "projects" || "Projects")) {
       console.log(`The word "project" was recognized: ${result}`);
       stop();
-      history.push("/projects");
+      setStartStop(true);
+      history.push("/pfprojects");
     }
-    if (result.includes("about this site" || "About this site")) {
+    if (result.includes("about this" || "About this")) {
       // history.push("/projects");
-      console.log(`The phrase "about this site" was recognized: ${result}`);
+      console.log(`The phrase "about this" was recognized: ${result}`);
       stop();
+      setStartStop(true);
       history.push("/aboutthis");
     }
     if (result.includes("about me" || "About me")) {
       // history.push("/projects");
       console.log(`The phrase "about me" was recognized: ${result}`);
       stop();
+      setStartStop(true);
       history.push("/aboutme");
     }
     if (result.includes("administrador" || "Administrador")) {
       // history.push("/projects");
       console.log(`The word "administrador" was recognized: ${result}`);
       stop();
+      setStartStop(true);
       history.push("/admin");
     }
     if (result.includes("login" || "Login")) {
       // history.push("/projects");
       console.log(`The word "login" was recognized: ${result}`);
       stop();
+      setStartStop(true);
       history.push("/login");
     }
     if (result.includes("home" || "Home")) {
       // history.push("/projects");
       console.log(`The word "home" was recognized: ${result}`);
       stop();
+      setStartStop(true);
       history.push("/");
     }
   };
@@ -55,10 +61,10 @@ export default function Mic() {
   const micActivation = () => {
     if (startStop === true) {
       listen();
-      setStartStop(!startStop);
+      setStartStop(false);
     } else {
-      setStartStop(!startStop);
       stop();
+      setStartStop(true);
     }
   };
 

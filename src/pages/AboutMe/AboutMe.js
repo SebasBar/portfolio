@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import fetchApi from "../../hooks/fetch";
 
-export default function Projects() {
+export default function AboutMe() {
   const [sebasInfo, setSebasInfo] = useState([]);
 
   useEffect(() => {
@@ -23,6 +23,12 @@ export default function Projects() {
       <h2>{`for example, this is my name: ${sebasInfo.first_name} ${sebasInfo.last_name} .... and if you want you can check my github page here:`}</h2>
       <p>{sebasInfo.picture}</p>
       {/* <p>{sebasInfo.phones[0].number}</p> */}
+
+      {/* <ul>
+        {sebasInfo.phones.map((phone) => {
+          return <li>phone.number</li>;
+        })}
+      </ul> */}
       {/* <p>{sebasInfo.emails.number}</p> */}
       {/* {sebasInfo.emails.map((phone) => {
         return (

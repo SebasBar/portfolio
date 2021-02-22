@@ -1,12 +1,16 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import useAsyncError from "../../hooks/useAsyncError";
 import fetchApi from "../../hooks/fetch";
+import "./Login.css";
+
+export const TokenContext = React.createContext();
 
 export default function Login() {
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
   const throwError = useAsyncError();
+  const [token, setToken] = useState(false);
 
   const history = useHistory();
 
@@ -25,60 +29,37 @@ export default function Login() {
           throwError(error);
         });
       } else {
+        setToken(true);
         history.push("/admin");
       }
     });
   };
 
-  //   const handleLogin = (e) => {
-  //     e.preventDefault();
-  //     console.log("login function");
-  //     fetchApi(
-  //       "http://localhost:8000/sebasbar/login",
-  //       "POST",
-  //       { "content-type": "application/json" },
-  //       { user: user, password: password }
-  //     ).then((resp) => {
-  //       if (!resp.ok) {
-  //         resp.json().then((json) => {
-  //           const error = new Error(json.message);
-  //           error.status = resp.status;
-  //           throwError(error);
-  //         });
-  //       } else {
-  //         history.push("/");
-  //       }
-  //     });
-  //   };
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-      }}
-    >
-      <h1>Login</h1>
-      <form onSubmit={handleLogin}>
-        <label htmlFor="user">User: </label>
-        <input
-          type="user"
-          placeholder="john doe"
-          value={user}
-          onChange={(e) => setUser(e.target.value)}
-        ></input>
-        <br />
-        <label htmlFor="password">Password: </label>
-        <input
-          type="password"
-          placeholder="Type your password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        ></input>
-        <br />
+    <TokenContext.Provider value={token}>
+      <div className="login-wrapper">
+        <h1>Login</h1>
+        <form onSubmit={handleLogin}>
+          <label htmlFor="user">User: </label>
+          <input
+            type="user"
+            placeholder="john doe"
+            value={user}
+            onChange={(e) => setUser(e.target.value)}
+          ></input>
+          <br />
+          <label htmlFor="password">Password: </label>
+          <input
+            type="password"
+            placeholder="Type your password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          ></input>
+          <br />
 
-        <input type="submit" value="Login"></input>
-      </form>
-    </div>
+          <input type="submit" value="Login"></input>
+        </form>
+      </div>
+    </TokenContext.Provider>
   );
 }

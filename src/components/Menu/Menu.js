@@ -21,7 +21,7 @@ export default function Menu() {
       <div className="menu-mic">
         <nav className="menu">
           <NavLink
-            to="/projects"
+            to="/pfprojects"
             activeStyle={{
               fontWeight: "bold",
               color: "red",
@@ -81,7 +81,7 @@ export default function Menu() {
         </div>
       </div>
       <Switch>
-        <Route exact path="/projects">
+        <Route exact path="/pfprojects">
           <Projects />
         </Route>
         <Route exact path="/aboutthis">
