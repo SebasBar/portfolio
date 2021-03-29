@@ -31,6 +31,7 @@ export default function Menu() {
               textDecoration: "none",
               color: "#001f3f",
               fontFamily: "Raleway, sans-serif",
+              fontSize: "25px",
             }}
           >
             <h2 className="menu-link">Projects</h2>
@@ -46,6 +47,7 @@ export default function Menu() {
               textDecoration: "none",
               color: "#001f3f",
               fontFamily: "Raleway, sans-serif",
+              fontSize: "25px",
             }}
           >
             <h2 className="menu-link">About this Site</h2>
@@ -61,16 +63,24 @@ export default function Menu() {
               textDecoration: "none",
               color: "#001f3f",
               fontFamily: "Raleway, sans-serif",
+              fontSize: "25px",
             }}
           >
             <h2 className="menu-link">About Me</h2>
           </NavLink>
           <NavLink
+            exact={true}
             to="/"
             style={{
               textDecoration: "none",
               color: "#001f3f",
               fontFamily: "Raleway, sans-serif",
+              fontSize: "25px",
+            }}
+            activeStyle={{
+              fontWeight: "bold",
+              color: "red",
+              textDecoration: "underline",
             }}
           >
             <h2 className="menu-link">Home</h2>

@@ -7,18 +7,18 @@ import fetchApi from "../../hooks/fetch";
 export default function Home() {
   const [sebasInfo, setSebasInfo] = useState({});
 
-  useEffect(() => {
-    fetchApi("/sebasbar")
-      .then((data) => {
-        setSebasInfo(data);
-        console.log(
-          `this is the data ${data} ${data.first_name} ${data.last_name}`
-        );
-      })
-      .catch((err) => {
-        console.log("error");
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetchApi("/sebasbar")
+  //     .then((data) => {
+  //       setSebasInfo(data);
+  //       console.log(
+  //         `this is the data ${data} ${data.first_name} ${data.last_name}`
+  //       );
+  //     })
+  //     .catch((err) => {
+  //       console.log("error");
+  //     });
+  // }, []);
 
   return (
     <>
@@ -29,12 +29,12 @@ export default function Home() {
           </div>
           <div className="name">
             <AnimatedText textColor="#FF4136" overlayColor="#001f3f">
-              {sebasInfo.first_name}
+              Sebastián
             </AnimatedText>
           </div>
           <div className="lastname">
             <AnimatedText textColor="#001f3f" overlayColor="#FF4136">
-              {sebasInfo.last_name}
+              Barckhahn
             </AnimatedText>
           </div>
           <div className="subtitle">
@@ -43,8 +43,9 @@ export default function Home() {
         </div>
         <div className="stupid-info">
           <div className="info">
-            This website is fetching information from a database, you can check
-            more about it in the section "About this Site" in the menu above ...
+            This is a fullstack webapp, you can check more about it in the
+            section "About this Site" in the menu above ... Chrome browser is
+            recomended.
           </div>
         </div>
       </div>

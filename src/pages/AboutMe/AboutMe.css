@@ -1,0 +1,5 @@
+.pdf {
+  display: flex;
+  width: 400px;
+  height: fit-content;
+}
