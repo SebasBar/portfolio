@@ -14,12 +14,14 @@ import AboutMe from "../../pages/AboutMe/AboutMe";
 import Admin from "../../pages/AdminPanel/Admin";
 import Login from "../../pages/Login/Login";
 import Mic from "../../components/Mic/Mic";
+import Social from "../../components/Social/Social";
 
 export default function Menu() {
   return (
     <Router>
-      <div className="menu-mic">
+      <div className="menu-social-mic">
         <nav className="menu">
+          <Social />
           <NavLink
             to="/pfprojects"
             activeStyle={{
@@ -29,6 +31,7 @@ export default function Menu() {
             }}
             style={{
               textDecoration: "none",
+              fontWeight: "bold",
               color: "#001f3f",
               fontFamily: "Raleway, sans-serif",
               fontSize: "25px",

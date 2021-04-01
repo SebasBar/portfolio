@@ -1,6 +1,32 @@
 .projects {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   justify-content: space-evenly;
   height: 100vh;
+}
+
+.title {
+  font-family: "New Tegomin", serif;
+  font-weight: bolder;
+  color: #001f3f;
+  font-size: 35px;
+  text-align: center;
+}
+
+.space {
+  height: 25px;
+}
+
+.line {
+  height: 15px;
+  margin: auto;
+  width: 85%;
+  background-color: #001f3f;
+  border-radius: 15px;
+}
+
+.picture {
+  height: 300px;
+  width: 300px;
 }

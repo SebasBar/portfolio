@@ -31,3 +31,9 @@
     0 100%
   );
 }
+
+@media (max-width: 900px) {
+  .animatedTextContent {
+    font-size: 100px;
+  }
+}

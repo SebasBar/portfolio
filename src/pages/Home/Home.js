@@ -7,19 +7,6 @@ import fetchApi from "../../hooks/fetch";
 export default function Home() {
   const [sebasInfo, setSebasInfo] = useState({});
 
-  // useEffect(() => {
-  //   fetchApi("/sebasbar")
-  //     .then((data) => {
-  //       setSebasInfo(data);
-  //       console.log(
-  //         `this is the data ${data} ${data.first_name} ${data.last_name}`
-  //       );
-  //     })
-  //     .catch((err) => {
-  //       console.log("error");
-  //     });
-  // }, []);
-
   return (
     <>
       <div className="site">
@@ -44,9 +31,10 @@ export default function Home() {
         <div className="stupid-info">
           <div className="info">
             This is a fullstack webapp, you can check more about it in the
-            section "About this Site" in the menu above ... Chrome browser is
-            recomended.
+            section "About this Site" in the menu above (you can navigate with
+            your voice).
           </div>
+          <div className="warning">Chrome browser is recomended !!!</div>
         </div>
       </div>
     </>

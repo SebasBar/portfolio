@@ -33,4 +33,22 @@ button:focus {
   display: flex;
   justify-content: flex-end;
   padding-right: 30px;
+  height: 70px;
+}
+
+.mic-pad {
+  padding-top: 19px;
+}
+
+@media (max-width: 900px) {
+  .legend {
+    font-size: 14px;
+    width: 115px;
+  }
+}
+
+@media (max-width: 700px) {
+  .legend {
+    display: none;
+  }
 }

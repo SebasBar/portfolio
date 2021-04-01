@@ -1,5 +1,49 @@
 .pdf {
-  display: flex;
-  width: 400px;
+  padding: 35px;
+  width: 700px;
   height: fit-content;
+}
+
+.text1 {
+  font-family: "New Tegomin", serif;
+  font-weight: bold;
+  color: #001f3f;
+  font-size: 27px;
+  padding: 40px;
+  text-align: justify;
+}
+.text2 {
+  font-family: "New Tegomin", serif;
+  font-weight: bold;
+  color: #001f3f;
+  font-size: 27px;
+  padding: 50px;
+  text-align: justify;
+}
+
+.pic {
+  height: 300px;
+  border-radius: 400px;
+  padding: 50px;
+}
+
+.top {
+  display: flex;
+  padding: 15px;
+}
+
+.bottom {
+  display: flex;
+}
+
+.space {
+  height: 25px;
+}
+
+.line {
+  height: 15px;
+  margin: auto;
+  width: 85%;
+  background-color: #001f3f;
+  border-radius: 15px;
 }

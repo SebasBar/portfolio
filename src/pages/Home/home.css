@@ -1,8 +1,8 @@
 .site {
+  height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 80vh;
 }
 
 .presentation {
@@ -11,6 +11,7 @@
   justify-content: center;
   background-color: white;
   padding: 0 10px;
+  height: 400px;
 }
 
 .name {
@@ -44,9 +45,16 @@
 .info {
   text-align: center;
   font-family: "Indie Flower", cursive;
-  font-size: 35px;
+  font-size: 30px;
   font-weight: bolder;
   padding-left: 150px;
   padding-right: 150px;
   color: #001f3f;
+}
+.warning {
+  text-align: center;
+  font-family: "Indie Flower", cursive;
+  font-size: 20px;
+  color: red;
+  font-weight: bolder;
 }
