@@ -1,9 +1,8 @@
 .projects {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-evenly;
-  height: 100vh;
+  margin-top: 20px;
 }
 
 .title {
@@ -26,7 +25,8 @@
   border-radius: 15px;
 }
 
-.picture {
-  height: 300px;
-  width: 300px;
+@media (max-width: 1200px) {
+  .projects {
+    flex-direction: column;
+  }
 }

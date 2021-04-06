@@ -2,8 +2,6 @@ import { useState, useEffect } from "react";
 import fetchApi from "../../hooks/fetch";
 import "./AboutMe.css";
 import PDFRender from "../../components/PDFRender/PDFrender";
-import CVSebas from "../../docs/SebastianBarckhahnResume.pdf";
-import PicSebas from "../../pics/SebasBar/cv.png";
 
 export default function AboutMe() {
   const [sebasInfo, setSebasInfo] = useState([]);
@@ -26,7 +24,7 @@ export default function AboutMe() {
       <div className="space" />
       <div className="line" />
       <div className="top">
-        <img className="pic" src={PicSebas} />
+        <img className="pic" src="http://localhost:8000/SebasBar/cv.png" />
         <div className="text1">
           I am Web Developer with experience in both front and back end,
           including practical experience. I have participate and developed
@@ -61,7 +59,7 @@ export default function AboutMe() {
           </div>
         </div>
         <div className="pdf">
-          <PDFRender pdfFile={CVSebas} />
+          <PDFRender pdfFile="http://localhost:8000/docs/SebastianBarckhahnResume.pdf" />
         </div>
       </div>
     </>
