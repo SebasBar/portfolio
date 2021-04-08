@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
 import "./ProjectCard.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faWeebly } from "@fortawesome/free-brands-svg-icons";
 
 export default function ProjectCard(props) {
   const { data } = props;
@@ -8,21 +9,72 @@ export default function ProjectCard(props) {
       <div className="container">
         <div className="card">
           <div className="front">
-            <div className="pname">{data.name}</div>
+            <div className="ptitle">{data.name}</div>
             <img src={data.pictures[0].picture} className="logo" />
+            <div className="desc1">
+              {data.description}
+              {/* {data.clients != "" && (
+                <ul>
+                  <h3>Clients:</h3>
+                  {data.clients.map((client) => {
+                    return <li className="client">{client.name}</li>;
+                  })}
+                </ul>
+              )} */}
+            </div>
           </div>
           <div className="back">
-            <h1>
+            <div className="ptitle">{data.name}</div>
+            {/* <div className="ptitle">
               Helen Parker
               <span>
                 design <i>&</i> photography
               </span>
-            </h1>
-            <ul>
-              <li>+1-111-111-11-11</li>
-              <li>my-email@email.com</li>
-              <li>my-site.com</li>
-            </ul>
+            </div> */}
+
+            {data.description2 != "" && (
+              <div className="desc2">{data.description2}</div>
+            )}
+            <br />
+            <div className="desc-plinks">
+              {data.description3 != "" && (
+                <div className="desc3">{data.description3}</div>
+              )}
+              <div className="plinks">
+                <a
+                  className="github"
+                  href="https://github.com/SebasBar"
+                  target="_blank"
+                ></a>
+                {data.github_link != "" && (
+                  <a className="github" href={data.github_link} target="_blank">
+                    <FontAwesomeIcon icon={faGithub} size="3x" />
+                    <p>Github Link</p>
+                  </a>
+                )}
+                {data.deployed_link != "" && (
+                  <a
+                    className="deployed"
+                    href={data.deployed_link}
+                    target="_blank"
+                  >
+                    <FontAwesomeIcon icon={faWeebly} size="3x" />
+                    <p>Website (download file)</p>
+                  </a>
+                )}
+              </div>
+            </div>
+            <div className="pul">
+              {data.tech_lang.map((lang) => {
+                return (
+                  <>
+                    <div title={lang.description} className="pli">
+                      {lang.name}
+                    </div>
+                  </>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

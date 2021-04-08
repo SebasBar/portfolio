@@ -27,6 +27,8 @@
 
 @media (max-width: 1200px) {
   .projects {
+    display: flex;
     flex-direction: column;
+    padding-bottom: 190px;
   }
 }

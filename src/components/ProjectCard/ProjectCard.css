@@ -22,7 +22,8 @@
 }
 .card {
   width: 600px;
-  height: 340px;
+  height: 550px;
+  border-style: solid;
   box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.7), 0 17px 17px 0 rgba(0, 0, 0, 0.5);
   position: relative;
   -webkit-transform: rotate(0deg);
@@ -42,6 +43,8 @@
   width: 450px;
   height: 300px;
   position: relative;
+  border-style: solid;
+  border-color: #001f3f;
   /* background: linear-gradient(45deg, #f5af69 50%, #f4eed7 50.9%),
     linear-gradient(90deg, #fc5135 50%, #4e203c 50%),
     linear-gradient(-45deg, #f5af69 50%, #e8d9a0 50.9%),
@@ -112,6 +115,7 @@
 .front {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .back {
   position: absolute;
@@ -151,33 +155,39 @@
   transform: rotateY(180deg) translateX(100%);
   cursor: pointer;
 }
-ul {
-  margin: 0;
+.pul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  bottom: -150px;
+  /* margin: 0;
+  align-items: center;
   width: 100%;
-  list-style: none;
+  list-style: circle;
   position: absolute;
   bottom: 30px;
   left: 0;
-  padding: 0 1%;
+  padding: 0 1%; */
 }
-ul:after {
+.pul:after {
   content: "";
   display: table;
   clear: both;
 }
-li {
-  width: 31.3333333333%;
+.pli {
+  width: 110px;
   margin: 0 1%;
   float: left;
   padding: 10px;
-  border: 2px solid #fc5135;
+  border: 2px solid #001f3f;
   border-radius: 4px;
   position: relative;
   text-align: center;
-  color: #4e203c;
+  color: red;
 }
-li:before {
-  position: absolute;
+.pli:before {
+  /* position: absolute;
   top: -25px;
   left: 50%;
   margin-left: -15px;
@@ -188,34 +198,104 @@ li:before {
   line-height: 30px;
   text-align: center;
   border-radius: 50%;
-  font-family: FontAwesome;
+  font-family: FontAwesome; */
 }
-li:nth-child(1):before {
+/* .pli:nth-child(1):before {
   content: "\f095";
 }
-li:nth-child(2):before {
+.pli:nth-child(2):before {
   content: "\f003";
 }
-li:nth-child(3):before {
+.pli:nth-child(3):before {
   content: "\f0c1";
-}
-h1 {
-  color: #fc5135;
-  text-transform: uppercase;
+} */
+.ptitle {
+  font-weight: bolder;
+  color: #001f3f;
+  font-size: 35px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  /* text-transform: uppercase;
   font-weight: 400;
   line-height: 1;
   margin-top: 110px;
   text-align: center;
-  font-size: 40px;
+  font-size: 40px; */
 }
-h1 span {
+.ptitle span {
   color: #4e203c;
   display: block;
   font-size: 0.45em;
   letter-spacing: 3px;
 }
-h1 i {
+.ptitle i {
   font-style: normal;
   text-transform: none;
   font-family: "Playfair Display", serif;
+}
+.desc1 {
+  font-family: "New Tegomin", serif;
+  font-size: medium;
+  font-weight: bolder;
+  padding: 25px;
+}
+
+.desc2 {
+  font-family: "New Tegomin", serif;
+  font-size: medium;
+  font-weight: bolder;
+  padding-right: 25px;
+  padding-left: 25px;
+  padding-top: 20px;
+}
+
+.desc3 {
+  font-family: "New Tegomin", serif;
+  font-size: medium;
+  font-weight: bolder;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+.github {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "New Tegomin", serif;
+  font-size: small;
+  text-align: center;
+  color: #001f3f;
+  padding-right: 15px;
+}
+
+.deployed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  font-family: "New Tegomin", serif;
+  text-align: center;
+  font-size: small;
+  color: #001f3f;
+}
+
+.plinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.desc-plinks {
+  display: flex;
+}
+
+.lang-desc {
+  display: none;
+}
+
+.pli:hover + .lang-desc {
+  display: block;
+  color: orangered;
 }
