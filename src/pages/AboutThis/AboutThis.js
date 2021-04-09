@@ -1,3 +1,7 @@
 export default function AboutThis() {
-  return <h1>About this site</h1>;
+  return (
+    <>
+      <h1>Page under construction</h1>
+    </>
+  );
 }

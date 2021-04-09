@@ -9,8 +9,8 @@ import {
 
 export default function Social() {
   return (
-    <div className="social">
-      <div className="links">
+    <div className="msocial">
+      <div className="mlinks">
         <a
           className="linkedin"
           href="https://www.linkedin.com/in/sebastianbarckhahn"
@@ -19,7 +19,7 @@ export default function Social() {
           <FontAwesomeIcon icon={faLinkedin} size="2x" />
         </a>
         <a
-          className="github"
+          className="mgithub"
           href="https://github.com/SebasBar"
           target="_blank"
         >
