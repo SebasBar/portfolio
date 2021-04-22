@@ -4,7 +4,7 @@
 
 .container {
   width: 600px;
-  height: 340px;
+  height: 360px;
   margin-top: 0;
   margin: 0 auto;
   position: auto;
@@ -22,8 +22,10 @@
 }
 .card {
   width: 600px;
-  height: 550px;
+  height: 610px;
   border-style: solid;
+  border-color: #001f3f;
+  border-radius: 25px;
   box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.7), 0 17px 17px 0 rgba(0, 0, 0, 0.5);
   position: relative;
   -webkit-transform: rotate(0deg);
@@ -40,7 +42,7 @@
   transition: 0.8s ease-in-out;
 }
 .logo {
-  width: 450px;
+  width: 500px;
   height: 300px;
   position: relative;
   border-style: solid;
@@ -118,6 +120,7 @@
   align-items: center;
 }
 .back {
+  border-radius: 25px;
   position: absolute;
   top: 0;
   left: 0;
@@ -160,7 +163,7 @@
   flex-wrap: wrap;
   justify-content: center;
   position: relative;
-  bottom: -150px;
+  width: 600px;
   /* margin: 0;
   align-items: center;
   width: 100%;
@@ -177,6 +180,7 @@
 }
 .pli {
   width: 110px;
+  height: auto;
   margin: 0 1%;
   float: left;
   padding: 10px;
@@ -186,8 +190,8 @@
   text-align: center;
   color: red;
 }
-.pli:before {
-  /* position: absolute;
+/* .pli:before {
+  position: absolute;
   top: -25px;
   left: 50%;
   margin-left: -15px;
@@ -198,9 +202,9 @@
   line-height: 30px;
   text-align: center;
   border-radius: 50%;
-  font-family: FontAwesome; */
+  font-family: FontAwesome;
 }
-/* .pli:nth-child(1):before {
+.pli:nth-child(1):before {
   content: "\f095";
 }
 .pli:nth-child(2):before {
@@ -236,17 +240,34 @@
 }
 .desc1 {
   font-family: "New Tegomin", serif;
+  color: #001f3f;
   font-size: medium;
   font-weight: bolder;
-  padding: 25px;
+  padding: 20px 45px 0px 45px;
+}
+
+.ptitleb {
+  font-weight: bolder;
+  color: red;
+  font-size: 35px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  /* text-transform: uppercase;
+  font-weight: 400;
+  line-height: 1;
+  margin-top: 110px;
+  text-align: center;
+  font-size: 40px; */
 }
 
 .desc2 {
   font-family: "New Tegomin", serif;
   font-size: medium;
   font-weight: bolder;
-  padding-right: 25px;
-  padding-left: 25px;
+  color: #001f3f;
+  padding-right: 45px;
+  padding-left: 45px;
   padding-top: 20px;
 }
 
@@ -254,41 +275,35 @@
   font-family: "New Tegomin", serif;
   font-size: medium;
   font-weight: bolder;
-  padding-right: 25px;
-  padding-left: 25px;
+  color: #001f3f;
+  padding-right: 45px;
+  padding-left: 45px;
 }
 .github {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-family: "New Tegomin", serif;
   font-size: small;
   text-align: center;
-  color: #001f3f;
+  color: red;
   padding-right: 15px;
 }
 
 .deployed {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 150px;
   font-family: "New Tegomin", serif;
   text-align: center;
   font-size: small;
-  color: #001f3f;
+  color: red;
 }
 
 .plinks {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
-.desc-plinks {
+.plinks-clients {
   display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
 }
 
 .lang-desc {
@@ -298,4 +313,76 @@
 .pli:hover + .lang-desc {
   display: block;
   color: orangered;
+}
+
+.link-client {
+  font-family: "New Tegomin", serif;
+  font-size: large;
+  font-weight: bolder;
+  color: #001f3f;
+  padding-left: 15px;
+}
+
+.client {
+  font-family: "New Tegomin", serif;
+  font-size: normal;
+  font-weight: bolder;
+  color: red;
+  padding-left: 20px;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+}
+
+.col-title {
+  font-family: "New Tegomin", serif;
+  font-size: 22px;
+  font-weight: bolder;
+  color: #001f3f;
+  padding-right: 20px;
+}
+
+.team-git {
+  color: #001f3f;
+}
+
+.team-name {
+  font-family: "New Tegomin", serif;
+  font-size: normal;
+  font-weight: bolder;
+  color: red;
+  padding-left: 10px;
+}
+
+.teamates {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  color: #001f3f;
+}
+
+.tnames {
+  display: flex;
+  flex-direction: column;
+}
+
+.space1 {
+  height: 20px;
+}
+
+.line1 {
+  width: 90%;
+  margin: auto;
+  border-bottom: 2px dotted red;
+}
+
+.line2 {
+  width: 60%;
+  margin: auto;
+  border-bottom: 2px dotted #001f3f;
 }

@@ -8,62 +8,140 @@ export default function ProjectCard(props) {
     <div className="projects">
       <div className="container">
         <div className="card">
+          {/* Card Front*/}
           <div className="front">
+            {/* Title front */}
             <div className="ptitle">{data.name}</div>
-            <img src={data.pictures[0].picture} className="logo" />
-            <div className="desc1">
-              {data.description}
-              {/* {data.clients != "" && (
-                <ul>
-                  <h3>Clients:</h3>
-                  {data.clients.map((client) => {
-                    return <li className="client">{client.name}</li>;
-                  })}
-                </ul>
-              )} */}
-            </div>
-          </div>
-          <div className="back">
-            <div className="ptitle">{data.name}</div>
-            {/* <div className="ptitle">
-              Helen Parker
-              <span>
-                design <i>&</i> photography
-              </span>
-            </div> */}
+            <div className="line1" />
+            <div className="space1" />
+            {/* Pictures */}
+            {data.pictures[0].picture != "" && (
+              <img src={data.pictures[0].picture} className="logo" />
+            )}
+            <div className="space1" />
+            <div className="line1" />
 
+            {/*Front Description  */}
+            <div className="desc1">{data.description}</div>
+          </div>
+
+          {/* Card Back */}
+          <div className="back">
+            {/* Title Back */}
+            <div className="ptitleb">{data.name}</div>
+
+            <div className="line2" />
+            {/* Description Back 1 (desc2) */}
             {data.description2 != "" && (
               <div className="desc2">{data.description2}</div>
             )}
             <br />
-            <div className="desc-plinks">
-              {data.description3 != "" && (
-                <div className="desc3">{data.description3}</div>
-              )}
+
+            {/* Description Back 2 (desc3) */}
+            {data.description3 != "" && (
+              <div className="desc3">{data.description3}</div>
+            )}
+
+            <div className="space1" />
+
+            <div className="line1" />
+
+            <div className="plinks-clients">
+              {/* Links  and clients */}
               <div className="plinks">
-                <a
-                  className="github"
-                  href="https://github.com/SebasBar"
-                  target="_blank"
-                ></a>
-                {data.github_link != "" && (
-                  <a className="github" href={data.github_link} target="_blank">
-                    <FontAwesomeIcon icon={faGithub} size="3x" />
-                    <p>Github Link</p>
-                  </a>
-                )}
-                {data.deployed_link != "" && (
+                <div className="link-client">Links:</div>
+
+                {/* Github Link */}
+                <div className="icons">
                   <a
-                    className="deployed"
-                    href={data.deployed_link}
+                    className="github"
+                    href="https://github.com/SebasBar"
                     target="_blank"
-                  >
-                    <FontAwesomeIcon icon={faWeebly} size="3x" />
-                    <p>Website (download file)</p>
-                  </a>
-                )}
+                  ></a>
+                  {data.github_link != "" && (
+                    <a
+                      className="github"
+                      href={data.github_link}
+                      target="_blank"
+                    >
+                      <FontAwesomeIcon
+                        title="Website (or download file)"
+                        icon={faGithub}
+                        size="3x"
+                      />
+                    </a>
+                  )}
+
+                  {/* Deployed link */}
+                  {data.deployed_link != "" && (
+                    <a
+                      className="deployed"
+                      href={data.deployed_link}
+                      target="_blank"
+                    >
+                      <FontAwesomeIcon
+                        title="Website (or download file)"
+                        icon={faWeebly}
+                        size="3x"
+                      />
+                      {/* <p>Website (or download file)</p> */}
+                    </a>
+                  )}
+                </div>
               </div>
+              {/* Clients */}
+              {data.clients != "" && (
+                <ul>
+                  <div className="link-client">Clients:</div>
+                  {data.clients.map((client) => {
+                    return <li className="client">{client.name}</li>;
+                  })}
+                </ul>
+              )}
             </div>
+
+            {/* teamates */}
+            {data.teamates != "" && (
+              <>
+                <div className="line2" />
+                <ul>
+                  <div className="teamates">
+                    <div className="col-title">Teamates:</div>
+                    <div className="tnames">
+                      {data.teamates.map((teamate) => {
+                        return (
+                          <>
+                            <li className="team-git">
+                              <a
+                                className="team-name"
+                                style={{ textDecoration: "none" }}
+                                href={teamate.github_link}
+                                target="_blank"
+                              >
+                                {`${teamate.name}:`}
+
+                                <FontAwesomeIcon
+                                  className="icon"
+                                  title="Website (or download file)"
+                                  icon={faGithub}
+                                  size="1x"
+                                />
+                              </a>
+                            </li>
+                            <br />
+                          </>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </ul>
+              </>
+            )}
+
+            <div className="line1" />
+            <div className="space1" />
+
+            {/* Programing Languaes and Technologies used */}
             <div className="pul">
               {data.tech_lang.map((lang) => {
                 return (

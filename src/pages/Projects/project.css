@@ -1,8 +1,15 @@
 .projects {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-evenly;
-  margin-top: 20px;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 25px;
+  margin-bottom: 300px;
+}
+
+.pcard {
+  height: 620px;
 }
 
 .title {
@@ -29,6 +36,6 @@
   .projects {
     display: flex;
     flex-direction: column;
-    padding-bottom: 190px;
+    padding-bottom: 10px;
   }
 }

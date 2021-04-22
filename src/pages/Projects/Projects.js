@@ -25,7 +25,7 @@ export default function Projects() {
       <div className="line" />
       <div className="projects">
         {projectsInfo.map((info, index) => {
-          return <ProjectCard data={info} />;
+          return <ProjectCard className="pcard" data={info} />;
         })}
       </div>
     </>
