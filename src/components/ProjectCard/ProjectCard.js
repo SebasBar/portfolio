@@ -15,8 +15,11 @@ export default function ProjectCard(props) {
             <div className="line1" />
             <div className="space1" />
             {/* Pictures */}
-            {data.pictures[0].picture != "" && (
-              <img src={data.pictures[0].picture} className="logo" />
+            {/* {console.log(typeof data.pictures[0].picture)} */}
+            {data.pictures[0] !== undefined ? (
+              <img alt="pic" src={data.pictures[0].picture} className="logo" />
+            ) : (
+              <p className="logo"> Not Found </p>
             )}
             <div className="space1" />
             <div className="line1" />
@@ -32,13 +35,13 @@ export default function ProjectCard(props) {
 
             <div className="line2" />
             {/* Description Back 1 (desc2) */}
-            {data.description2 != "" && (
+            {data.description2 !== "" && (
               <div className="desc2">{data.description2}</div>
             )}
             <br />
 
             {/* Description Back 2 (desc3) */}
-            {data.description3 != "" && (
+            {data.description3 !== "" && (
               <div className="desc3">{data.description3}</div>
             )}
 
