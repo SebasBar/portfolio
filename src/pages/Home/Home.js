@@ -1,12 +1,8 @@
 import React from "react";
-import { useState, useEffect } from "react";
 import AnimatedText from "../../components/AnimatedText/AnimatedText";
 import "./home.css";
-import fetchApi from "../../hooks/fetch";
 
 export default function Home() {
-  const [sebasInfo, setSebasInfo] = useState({});
-
   return (
     <>
       <div className="site">
@@ -25,16 +21,18 @@ export default function Home() {
             </AnimatedText>
           </div>
           <div className="subtitle">
-            <h1>full stack web developer</h1>
+            <h1>Web developer</h1>
           </div>
         </div>
         <div className="stupid-info">
           <div className="info">
-            This is a fullstack webapp, you can check more about it in the
-            section "About this Site" in the menu above (you can navigate with
-            your voice).
+            This is a fullstack web application that you can navigate with your
+            voice, just press the mic and say the title of the page you want to
+            go. The site is still under construction.
           </div>
-          <div className="warning">Chrome browser is recomended !!!</div>
+          <div className="warning">
+            Chrome browser is recomended for voice control !!!
+          </div>
         </div>
       </div>
     </>

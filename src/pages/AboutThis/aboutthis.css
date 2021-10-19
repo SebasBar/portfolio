@@ -1,3 +1,11 @@
+.title {
+  font-family: "New Tegomin", serif;
+  font-weight: bolder;
+  color: #001f3f;
+  font-size: 35px;
+  text-align: center;
+}
+
 .pdf {
   padding: 35px;
   width: 700px;
@@ -21,10 +29,22 @@
   text-align: justify;
 }
 
-.pic {
+.picture1 {
+  height: 500px;
+  margin: 50px;
+  border: 5px solid #001f3f;
+}
+
+.picture2 {
   height: 300px;
-  border-radius: 400px;
-  padding: 50px;
+  margin: 50px;
+  border: 5px solid #001f3f;
+}
+
+.picture3 {
+  height: 700px;
+  margin: 50px;
+  border: 5px solid #001f3f;
 }
 
 .top {
