@@ -35,13 +35,13 @@ export default function ProjectCard(props) {
 
             <div className="line2" />
             {/* Description Back 1 (desc2) */}
-            {data.description2 !== "" && (
+            {data.description2 && data.description2 !== "" && (
               <div className="desc2">{data.description2}</div>
             )}
             <br />
 
             {/* Description Back 2 (desc3) */}
-            {data.description3 !== "" && (
+            {data.description3 && data.description3 !== "" && (
               <div className="desc3">{data.description3}</div>
             )}
 
@@ -61,7 +61,7 @@ export default function ProjectCard(props) {
                     href="https://github.com/SebasBar"
                     target="_blank"
                   ></a>
-                  {data.github_link != "" && (
+                  {data.github_link && data.github_link != "" && (
                     <a
                       className="github"
                       href={data.github_link}
@@ -76,7 +76,7 @@ export default function ProjectCard(props) {
                   )}
 
                   {/* Deployed link */}
-                  {data.deployed_link != "" && (
+                  {data.deployed_link && data.deployed_link != "" && (
                     <a
                       className="deployed"
                       href={data.deployed_link}
@@ -93,7 +93,7 @@ export default function ProjectCard(props) {
                 </div>
               </div>
               {/* Clients */}
-              {data.clients != "" && (
+              {data.clients && data.clients != "" && (
                 <ul>
                   <div className="link-client">Clients:</div>
                   {data.clients.map((client) => {
@@ -104,7 +104,7 @@ export default function ProjectCard(props) {
             </div>
 
             {/* teamates */}
-            {data.teamates != "" && (
+            {data.teamates && data.teamates != "" && (
               <>
                 <div className="line2" />
                 <ul>

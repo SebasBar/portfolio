@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import fetchApi from "../../hooks/fetch";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import "./project.css";
+import { projectInfo } from "../../utils/constants";
 
 export default function Projects() {
   const [projectsInfo, setProjectsInfo] = useState([]);
@@ -14,6 +15,7 @@ export default function Projects() {
       })
       .catch((err) => {
         console.log("error");
+        setProjectsInfo(projectInfo);
       });
   }, []);
 
